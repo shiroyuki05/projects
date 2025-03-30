@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main(){
+
+	int wheels2,handle,wheels4,bike,cargo,pass;
+	cout<<"(1.yes and 2.no)"<<endl;
+	cout<<"is your viicle has two wheels?: ";
+	cin>>wheels2;
+	cout<<"does your vihicle have 4 wheels?: ";
+	cin>>wheels4;
+	cout<<"does your vehicle have handlebar?: ";
+	cin>>handle;
+	cout<<"does your vehiecle carry passenger?: " ;
+	cin>>pass;
+	cout<<"does your vehicle carry cargo?: ";
+	cin>>cargo;
+
+	if (wheels2 ==1 && wheels4 ==2 && handle==1 &&pass==2&&cargo==2){
+	cout<<"its a bicycle";
+	} else if (wheels2 ==2 && wheels4 ==1 && handle==2 &&pass==1&&cargo==2){
+		cout<<"its a car";
+	} else if (wheels2 ==2 && wheels4 ==1 && handle==2 &&pass==2&&cargo==1){
+		cout<<"its a Truck";
+	} else{
+		cout<<"its an unknown vehicle";
+	}
+
+}
