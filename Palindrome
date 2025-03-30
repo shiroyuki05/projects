@@ -1,0 +1,53 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<ctype.h>
+
+main()
+{
+clrscr();
+char word[30];
+char rev[30];
+int pali = 1;
+int count=0;
+do{
+cout<<"Enter a string (-1 to exit): ";
+cin>>word;
+if(word[0] == '-' && word[1] == '1'){
+	cout<<"Exiting program";
+	getch();
+	exit(0);
+}
+
+
+for(int f=0; f<strlen(word); f++){
+	word[f] = tolower(word[f]);
+}
+
+for(int i = strlen(word)-1; i>=0;i--){
+	rev[(strlen(word)-1)-i] = word[i];
+}
+cout<<rev<<endl;
+for(int j=0; j<strlen(word); j++){
+	if(rev[j] != word[j]){
+	     pali = 0;
+	}
+}
+if (pali ==1){
+	cout<<"The input is a palindrome."<<endl;
+}
+else{
+	cout<<"The input is not a palindrome."<<endl;
+}
+for(int o=0;o<strlen(word); o++){
+	word[o]=' ';
+	rev[o]=' ';
+}
+pali=1;
+count=0;
+}while(word[0] !='-' && word[1] !='1');
+
+
+getch();
+}
