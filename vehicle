@@ -4,13 +4,13 @@ int main(){
 
 	int wheels2,handle,wheels4,bike,cargo,pass;
 	cout<<"(1.yes and 2.no)"<<endl;
-	cout<<"is your viicle has two wheels?: ";
+	cout<<"is your vehicle has two wheels?: ";
 	cin>>wheels2;
-	cout<<"does your vihicle have 4 wheels?: ";
+	cout<<"does your vehicle have 4 wheels?: ";
 	cin>>wheels4;
 	cout<<"does your vehicle have handlebar?: ";
 	cin>>handle;
-	cout<<"does your vehiecle carry passenger?: " ;
+	cout<<"does your vehicle carry passenger?: " ;
 	cin>>pass;
 	cout<<"does your vehicle carry cargo?: ";
 	cin>>cargo;
