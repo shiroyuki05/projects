@@ -1,0 +1,61 @@
+import java.util.Scanner;
+public class monthBud {
+    public static void main(String[] args){
+        System.out.println("Enter your monthly budget: ");
+        Scanner num = new Scanner(System.in);
+        double monBud = num.nextDouble();
+        
+        System.out.println("Rent: ");
+        double rent = num.nextDouble();
+        
+        System.out.println("Groceries: ");
+        double groc = num.nextDouble();
+        
+        System.out.println("Utilities: ");
+        double util = num.nextDouble();
+        
+        System.out.println("Transportation: ");
+        double transpo = num.nextDouble();
+ 
+        System.out.println("Entertaiment: ") ;
+        double entertain = num.nextDouble();
+        
+        
+        double total = rent + groc + util + transpo + entertain;
+        
+        double remBal = monBud - total;
+        
+        
+        double limit = monBud * 0.20;
+        
+
+        System.out.println("\nRent: " + rent);
+        System.out.println("Grocery: " + groc);
+        System.out.println("Utilities: " + util);
+        System.out.println("Transportation: " + transpo);
+        System.out.println("Entertainment: " + entertain);
+        System.out.println("Total Spent: " + total);
+        
+        if (total>monBud){
+            System.out.println("Over Budget: " + (remBal*-1));
+        } else {
+            System.out.println("Remaining Balance: " + remBal);
+        }
+        
+        if (total>monBud){
+            if (rent>=limit){
+                System.out.println("The rent exceed the limit!");
+            } if(groc>=limit){
+                System.out.println("The grocery exceed the limit!");
+            } if (util>=limit){
+                System.out.println("The utilities exceed the limit!");
+            } if (transpo>=limit){
+                System.out.println("The transportation exceed the limit!");        
+            } if (entertain>=limit){
+                System.out.println("The entertainment exceed the limit!");        
+            }
+        } else {
+                System.out.println("No bills have exceed the limit!");
+        }
+    }
+}
