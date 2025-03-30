@@ -1,0 +1,33 @@
+#include<iostream.h>
+#include<conio.h>
+
+int main(){
+clrscr();
+	float price, disc,tax,fprice,dprice,total,final;
+	cout<<"Enter THe price of the product: ";
+	cin>>price;
+	cout<<"enter the tax of the product: ";
+	cin>>tax;
+
+	if(price<=500){
+	cout<<"theirs no discount!";
+	}else if (price >500 && price <=1000){
+	cout<<"5%discount!";
+	disc = price * 0.5;
+	}else if (price > 1000){
+	cout<<"10% discount!";
+	disc = price *0.10;
+	}
+	fprice =price -disc;
+	tax= (tax/100)* fprice;
+	total = fprice +tax;
+
+
+	cout<<endl<<"the original price is: "<<price<<endl;
+	if(price >500){
+	cout<<"the discout is: "<<disc<<endl;}
+	cout<<"discounted price: "<<fprice<<endl;
+	cout<<"the tax amout is: "<<tax<<endl;
+	cout<<"the final price is: "<<total																																																;
+	getch();
+	}
